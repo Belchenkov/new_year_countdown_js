@@ -28,4 +28,10 @@ function updateCountDown() {
     seconds.innerHTML = s < 10 ? '0' + s : s;
 }
 
+// Show spinner before countdown
+setTimeout(() => {
+    loading.remove();
+    countdown.style.display = 'flex';
+}, 1000);
+
 setInterval(updateCountDown, 1000);
